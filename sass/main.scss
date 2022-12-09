@@ -1,0 +1,27 @@
+@use 'colors' as col;
+@use 'animations' as anim;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.6rem;
+	color: col.$white;
+	background-color: col.$dark;
+	// font-family: 'Cinzel', serif;
+}
+
+@import 'small';
+@import 'medium';
+@import 'large';
