@@ -3,6 +3,7 @@
 		font-size: 6rem;
 	}
 
+	// HEADER
 	.header {
 		grid-template-rows: auto 1fr 1fr;
 
@@ -98,6 +99,7 @@
 }
 
 @media (min-width: 1200px) {
+	// HEADER
 	.header {
 		&__text {
 			p {
