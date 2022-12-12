@@ -3,6 +3,14 @@
 		font-size: 6rem;
 	}
 
+	.section-title {
+		font-size: 5.8rem;
+
+		&::before {
+			height: 4px;
+		}
+	}
+
 	// HEADER
 	.header {
 		grid-template-rows: auto 1fr 1fr;

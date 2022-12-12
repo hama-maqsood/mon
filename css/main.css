@@ -83,6 +83,29 @@ h1.company-name {
   width: 100%;
 }
 
+.section-title {
+  position: relative;
+  margin: 0 auto 2em;
+  font-size: 3.2em;
+  color: #d6c78e;
+  font-weight: 200;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.section-title::before {
+  position: absolute;
+  bottom: -0.1em;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #d6c78e;
+  content: "";
+}
+.section-title span {
+  font-weight: 900;
+}
+
 .header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -251,6 +274,98 @@ h1.company-name {
   grid-column: 1/-1;
 }
 
+.invest {
+  position: relative;
+  display: grid;
+  grid-template-areas: "title" "box" "box";
+  padding: 6em 2em;
+}
+.invest__title {
+  grid-area: title;
+}
+.invest__boxes {
+  grid-area: box;
+}
+.invest__box-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: sepia();
+}
+.invest__box-title {
+  margin: 0.3em 0;
+  font-size: 2.6em;
+  color: #d6c78e;
+  font-weight: 200;
+}
+.invest__box-text {
+  margin-bottom: 0.5em;
+}
+.invest__box-link {
+  display: block;
+  margin-bottom: 2em;
+  font-weight: bold;
+  color: #d6c78e;
+  text-align: right;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.invest__box-link:hover {
+  color: #9b9165;
+}
+.invest__bg-icon {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .invest {
+    grid-template-areas: "title box" "title box" "title box";
+    padding: 10em 2em;
+  }
+  .invest__box {
+    display: grid;
+    justify-content: end;
+  }
+  .invest__title {
+    padding: 0 1em;
+  }
+  .invest__box-img, .invest__box-text {
+    max-width: 500px;
+  }
+  .invest__bg-icon {
+    position: absolute;
+    display: block;
+    opacity: 0.05;
+    z-index: -5;
+  }
+  .invest__bg-icon-one {
+    top: 14%;
+    width: 20%;
+    -webkit-animation: rotate-right 160s infinite linear;
+            animation: rotate-right 160s infinite linear;
+  }
+  .invest__bg-icon-two {
+    bottom: 10%;
+    left: 10%;
+    width: 30%;
+    -webkit-animation: rotate-right 140s infinite linear;
+            animation: rotate-right 140s infinite linear;
+  }
+  .invest__bg-icon-three {
+    top: 26%;
+    left: 16%;
+    width: 50%;
+    -webkit-animation: rotate-right 160s infinite linear;
+            animation: rotate-right 160s infinite linear;
+  }
+  .invest__bg-icon-four {
+    top: 55%;
+    left: -10%;
+    width: 15%;
+    -webkit-animation: rotate-right 140s infinite linear;
+            animation: rotate-right 140s infinite linear;
+  }
+}
 @media (min-width: 768px) {
   .cards__box {
     padding: 10em 2em;
@@ -271,6 +386,12 @@ h1.company-name {
 @media (min-width: 992px) {
   h1.company-name {
     font-size: 6rem;
+  }
+  .section-title {
+    font-size: 5.8rem;
+  }
+  .section-title::before {
+    height: 4px;
   }
   .header {
     grid-template-rows: auto 1fr 1fr;
