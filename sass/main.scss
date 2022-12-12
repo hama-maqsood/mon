@@ -345,6 +345,45 @@ h1.company-name {
 	}
 }
 
+//NEWSLETTER
+.newsletter {
+	padding: 8em 2em;
+	background-color: col.$red;
+	text-align: center;
+
+	&__text {
+		padding: 1em;
+		margin-bottom: 1em;
+		font-size: 4rem;
+		font-weight: 200;
+	}
+
+	&__form {
+		&-input {
+			margin-bottom: 1em;
+			padding: 1em;
+			width: 100%;
+			background-color: col.$white;
+			border: 1px solid transparent;
+		}
+
+		&-btn {
+			padding: 1em;
+			border: 1px solid col.$gold;
+			background: none;
+			color: col.$gold;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color 0.3s, color 0.3s;
+
+			&:hover {
+				color: col.$red;
+				background-color: col.$gold;
+			}
+		}
+	}
+}
+
 @import 'small';
 @import 'medium';
 @import 'large';
